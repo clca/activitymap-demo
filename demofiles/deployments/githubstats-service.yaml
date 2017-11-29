@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: githubstats
+  labels:
+    app: githubstats
+spec:
+  ports:
+  - port: 9000
+    name: http
+  selector:
+    app: githubstats
+---

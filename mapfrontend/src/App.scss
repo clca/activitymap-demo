@@ -1,0 +1,91 @@
+$borderColor: #ddd;
+$borderRadius: 3px;
+$boxShadow: 3px 3px 6px $borderColor;
+
+.state {
+  stroke: #555;
+  stroke-width: 1px;
+  fill: #fafafa;
+  transition: fill 0.5s ease;
+  outline: none;
+  cursor: pointer;
+}
+
+state:hover {
+  stroke: #fff;
+}
+
+.county {
+  stroke: #ededed;
+  fill: none;
+  stroke-width: 0.5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.county:hover {
+  fill: none;
+}
+
+.dataContainer {
+  line-height: 1.5;
+  font-size: 0.9em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .mapContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .header {
+      padding: 15px 0 0;
+      max-width: 1080px;
+
+      h1 {
+        font-style: italic;
+      }
+    }
+
+    .map {
+      border: 1px solid $borderColor;
+      margin: 3px;
+      border-radius: $borderRadius;
+      box-shadow: $boxShadow;
+    }
+
+    .dataContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      width: 1080px;
+      margin-top: 5px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+  }
+
+  .actionsContainer {
+
+  }
+}
+
+.stateName {
+  fill: #888;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.inlineHelp {
+  color: rgba(59, 81, 116, 0.79);
+  font-style: italic;
+  font-size: 0.9em;
+  padding: 1em;
+}

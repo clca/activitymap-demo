@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: swagger-java-client
+Specification-Version: 1.0.0
+Specification-Vendor: io.swagger
+Implementation-Title: swagger-java-client
+Implementation-Version: 1.0.0
+Implementation-Vendor: io.swagger
+Implementation-Vendor-Id: io.swagger
+

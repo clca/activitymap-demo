@@ -1,0 +1,18 @@
+.property {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3px 5px; }
+  .property label.label {
+    color: #828282;
+    margin-right: 5px; }
+  .property .valueContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+    .property .valueContainer .extra {
+      font-size: small;
+      color: #aaaaaa;
+      font-style: italic; }
+
+/*# sourceMappingURL=property.css.map */

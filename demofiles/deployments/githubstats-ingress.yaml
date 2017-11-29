@@ -1,0 +1,30 @@
+###########################################################################
+# Ingress resource (gateway)
+##########################################################################
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: githubstats
+  annotations:
+    kubernetes.io/ingress.class: "istio"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /githubstats/status
+        backend:
+          serviceName: githubstats
+          servicePort: 9000
+      - path: /githubstats/stats/.*
+        backend:
+          serviceName: githubstats
+          servicePort: 9000
+      - path: /githubstats/stats
+        backend:
+          serviceName: githubstats
+          servicePort: 9000
+      - path: /githubstats/history/.*
+        backend:
+          serviceName: githubstats
+          servicePort: 9000
+---

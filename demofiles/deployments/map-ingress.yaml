@@ -1,0 +1,34 @@
+###########################################################################
+# Ingress resource (gateway)
+##########################################################################
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: activitymap
+  annotations:
+    kubernetes.io/ingress.class: "istio"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /map/.*
+        backend:
+          serviceName: activitymap
+          servicePort: 3000
+#      - path: /static/.*
+#        backend:
+#          serviceName: activitymap
+#          servicePort: 3000
+#      - path: /data/.*
+#        backend:
+#          serviceName: activitymap
+#          servicePort: 3000
+      - path: /map/stats
+        backend:
+          serviceName: activitymap
+          servicePort: 3000
+      - path: /map/history
+        backend:
+          serviceName: activitymap
+          servicePort: 3000
+---
