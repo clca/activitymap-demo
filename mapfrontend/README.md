@@ -11,11 +11,11 @@ yarn build
 ```
 
 This will create a `build` folder that can be used to serve the UI. You can also serve the UI at the default port of 
-`5000` by calling the following command.
+`3000` by calling the following command.
 
 ```bash
 yarn serve
-open http://localhost:5000
+open http://localhost:3000
 ```
 
 ## Clean up and reinstallation

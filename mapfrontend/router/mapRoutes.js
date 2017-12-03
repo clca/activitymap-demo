@@ -10,6 +10,7 @@ const service = 'http://githubstats:9000/githubstats';
 const statsService = `${service}/stats`;
 const historyService = `${service}/history`;
 
+
 const handleError = error => {
   let json = {
     code: error.code,
