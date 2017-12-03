@@ -1,0 +1,22 @@
+{
+  "name": "githubstats_api",
+  "version": "1.0.0",
+  "description": "_Version__V2Generate_Github_statistics_on_number_of_commits_number_of_stars_Aggregated_activityfor_GitHub_projects_aggregated_by_US_States",
+  "license": "Unlicense",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "superagent": "3.5.2",
+    "properties" : "1.2.1"
+  },
+  "devDependencies": {
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3",
+    "expect.js": "~0.3.1"
+  }
+}
