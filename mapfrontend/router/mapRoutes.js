@@ -33,6 +33,25 @@ router.use((req, res, next) => {
   next();
 });
 
+var GithubstatsApi = require('../githubstats-api-v2');
+var client = GithubstatsApi.Configuration.createApiClient();
+var api = new GithubstatsApi.HealthcheckApi(client);
+
+router.get('/githubstatus', function(req, res) {
+
+  var callback = function(error, data, response) {
+    if (error) {
+      res.send("there was an error");
+      console.error(error);
+    } else {
+      res.send(data);
+      console.log('API called successfully.');
+    }
+  };
+  api.githubstatsStatusGet(callback);
+  
+});
+
 router.get('/stats', function(req, res) {
   axios
     .get(statsService)
