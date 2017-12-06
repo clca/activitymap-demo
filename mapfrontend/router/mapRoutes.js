@@ -33,35 +33,16 @@ router.use((req, res, next) => {
   next();
 });
 
-var GithubstatsApi = require('../githubstats-api-v2');
-var client = GithubstatsApi.Configuration.createApiClient();
-var api = new GithubstatsApi.HealthcheckApi(client);
-
-router.get('/githubstatus', function(req, res) {
-
-  var callback = function(error, data, response) {
-    if (error) {
-      res.send("there was an error");
-      console.error(error);
-    } else {
-      res.send(data);
-      console.log('API called successfully.');
-    }
-  };
-  api.githubstatsStatusGet(callback);
-  
-});
-
 router.get('/stats', function(req, res) {
   axios
-    .get(statsService)
-    .then(response => {
-      res.json(response.data);
-    })
-    .catch(e => {
-      console.log('Error getting: ', req.originalUrl, e.code, e.statusText);
-      res.status(500).json({ error: handleError(e) });
-    });
+  .get(statsService)
+  .then(response => {
+    res.json(response.data);
+  })
+  .catch(e => {
+    console.log('Error getting: ', req.originalUrl, e.code, e.statusText);
+    res.status(500).json({ error: handleError(e) });
+  });
 });
 
 router.get('/history/:from/:to', (req, res) => {

@@ -1,0 +1,29 @@
+.tileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  flex-direction: column;
+  box-shadow: 4px 4px 6px #ddd;
+  margin: 5px 10px;
+  min-width: 6em;
+  background: rgba(131, 155, 215, 0.08);
+  cursor: default !important; }
+  .tileContainer .label {
+    padding: 3px;
+    text-align: center;
+    padding-bottom: 0;
+    color: #7a8fa8;
+    font-style: italic; }
+  .tileContainer .value {
+    padding: 3px 12px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #3b5174;
+    padding-bottom: 0; }
+
+/*# sourceMappingURL=tile.css.map */

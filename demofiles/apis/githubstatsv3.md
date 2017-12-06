@@ -2,7 +2,7 @@ FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
 
 # githubstats API
-## Version [V2]
+## Version [V3]
 
 Generate Github statistics on:
 * number of commits
@@ -34,7 +34,7 @@ Call to check the liveness of the service
 
 # Group Stats
 
-## Get All Stats [/githubstatus/stats]
+## Get All Stats [/githubstats/stats]
 Returns stats for all US States
 
 ### Retrieve all Stats [GET]
@@ -417,7 +417,7 @@ Returns Stats for a specific US State.
 }
 ```
 
-## Get Historical Stats [/history?{from}&{to}]
+## Get Historical Stats [/history{?from,to}]
 Returns Historical data 
 ### Retrieve Historic Stats [GET]
 
@@ -2917,5 +2917,4 @@ Returns Historical data
     }
 ]
 ```
-
 

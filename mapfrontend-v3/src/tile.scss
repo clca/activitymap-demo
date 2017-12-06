@@ -1,0 +1,39 @@
+$borderColor: #ddd;
+$borderRadius: 6px;
+$boxShadow: 4px 4px 6px $borderColor;
+$textColor: #3b5174;
+$labelColor: #7a8fa8;
+$fill: rgba(131, 155, 215, 0.08);
+
+.tileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  border: 1px solid $borderColor;
+  border-radius: $borderRadius;
+  flex-direction: column;
+  box-shadow: $boxShadow;
+  margin: 5px 10px;
+  min-width: 6em;
+  background: $fill;
+  cursor: default !important;
+
+  .label {
+    padding: 3px;
+    text-align: center;
+    padding-bottom: 0;
+    color: $labelColor;
+    font-style: italic;
+  }
+
+  .value {
+    padding: 3px 12px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: $textColor;
+    padding-bottom: 0;
+  }
+}

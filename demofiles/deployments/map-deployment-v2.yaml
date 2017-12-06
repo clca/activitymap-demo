@@ -18,7 +18,7 @@ spec:
         version: v2
     spec:
       containers:
-      - image: clca/mapsrv:v5
+      - image: clca/mapsrv:v2
         imagePullPolicy: Always
         name: activitymap
         ports:

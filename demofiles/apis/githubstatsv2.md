@@ -34,7 +34,7 @@ Call to check the liveness of the service
 
 # Group Stats
 
-## Get All Stats [/githubstatus/stats]
+## Get All Stats [/githubstats/stats]
 Returns stats for all US States
 
 ### Retrieve all Stats [GET]
@@ -415,5 +415,4 @@ Returns Stats for a specific US State.
     "numStars": 3,
     "numEvents": 55
 }
-```
-
+`
