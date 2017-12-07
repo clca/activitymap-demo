@@ -14,13 +14,12 @@ object MySQLStorage extends JsonSupport {
   var connection: Connection = null
 
   def init(host: String, password: String): Unit = {
-    val url = s"sjdbc:mysql://$host/mysql"
-    val username = "root"
 
     try {
       // make the connection
       Class.forName(driver)
-      connection = DriverManager.getConnection(s"jdbc:mysql://$host/?" +
+      println(s"jdbc:mysql://$host:3306/?" + s"user=root&password=$password")
+      connection = DriverManager.getConnection(s"jdbc:mysql://$host:3306/?" +
         s"user=root&password=$password")
       // create githubstats DB
       val statement = connection.createStatement()

@@ -22,9 +22,12 @@ spec:
         - name: VERSION
           value: V3
         - name: MYSQL_HOST
-          value: mysql
+          value: githubstats-mysql
         - name: MYSQL_PASSWORD
-          value: password
+          valueFrom:
+              secretKeyRef:
+                name: githubstats-mysql
+                key:  mysql-root-password
         image: clca/githubstats:0.0.1
         imagePullPolicy: Always
         name: githubstats
