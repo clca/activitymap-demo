@@ -61,12 +61,13 @@ NOTE: scripts require the IP address of the cluster
  
  # Directory Structure
  * demofiles: contains deployment and istio configuration files that are used in the demo
- *  \apis: container the apiblueprint file that are used to create the ApiDescriptors using the Aura admin site
-    *   \deployments: deployment files for all services required for the demo. NOTE: deployment files already have istio sidecar injected
-    *   \load: scripts that can be used to generate traffic to the various services so there is some data to show in the admin console
-    *   \mesh: istio deployment files used to show routing of traffic from V2 to V3 and viceversa. 
-* githubstats: Scala project with the backend service used by the node.js front-end
-* mapfrontend: initial version of the frontend app. All calls in the projects are done using traditional HTTP requests so it does not use Aura API-First approach
-* mapfrontend-v2: version of the frontend project that used the node.js generated client library in order to connect to V2 version of the githubstats backend
-* mapfrontend-v3: version that connects to the V3 version of the backend service
+    *  apis/: container the apiblueprint file that are used to create the ApiDescriptors using the Aura admin site
+        *   deployments/: deployment files for all services required for the demo. NOTE: deployment files already have istio sidecar injected
+        *   load/: scripts that can be used to generate traffic to the various services so there is some data to show in the admin console
+        *   mesh/: istio deployment files used to show routing of traffic from V2 to V3 and viceversa. 
+
+    * githubstats/: Scala project with the backend service used by the node.js front-end
+    * mapfrontend/: initial version of the frontend app. All calls in the projects are done using traditional HTTP requests so it does not use Aura API-First approach
+    * mapfrontend-v2/: version of the frontend project that used the node.js generated client library in order to connect to V2 version of the githubstats backend
+    * mapfrontend-v3/: version that connects to the V3 version of the backend service
 
