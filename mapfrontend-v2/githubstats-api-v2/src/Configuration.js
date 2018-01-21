@@ -41,7 +41,7 @@
 * @class
 */
 
-  var API_ID = '27487964-b499-4f80-afc7-48975592ced6';
+  var API_ID = 'd7c2c508-bd32-436e-9b13-bc217efe289d';
   var DISCOVERY_SERVICE_URL = 'http://aura-api-catalog:8080';
   var DEFAULT_NAME = 'aura-javascript-client';
   var DEFAULT_SCHEME_NAME = 'http';
