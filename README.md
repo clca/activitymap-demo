@@ -48,7 +48,7 @@ Note: there is no need to bind a service to the description
 29.	I deploy the new version in the cluster: kubectl create –f deployments/map-deployment-v3.yaml
 30.	I have two versions of the frontend and two versions of the backend, show it via ```kubectl get po```
 31.	I want now to redirect traffic to the right versions using the service mash
-32.	First I redirect traffic to the V3 version of my backend service: ```istioctl replace –f mesh/githubstats-routing-v2.yaml```
+32.	First I redirect traffic to the V3 version of my backend service: ```istioctl replace –f mesh/githubstats-routing-v3.yaml```
 a.	Now all traffic to the Githubstats service goes to the V3 version
 33.	I want to show the new frontend, so like I have done with the backend service, I redirect traffic to the new version: ```istioctl replace –f mesh/map-v3-routing.yaml```
 34.	Go to the maps page and how I should see the slides on the side that allows to move in the timescale
